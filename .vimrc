@@ -17,3 +17,4 @@ set clipboard=unnamedplus
 
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 let NERDTreeWinSize=20
+let NERDTreeShowHidden=1
