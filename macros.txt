@@ -1,0 +1,13 @@
+## Rails
+
+Convert to admin controller
+
+    $bceAdminController^wiAdmin::jjjddjjjjddjjjddjjjjddjjjddjjjjwwi[:admin,eea]jjjjjjddjjwwi[:admin,eea]jjjjjjddjjwwiadmin_jjjjddjjjjdd;w
+
+Convert views to admin
+
+    wwa[:admin,eea];whj/Showwwi[:admin,eea]jb?Backwwi[:admin,ea];whj/new_lllliadmin_/Show$bi[:admin,ea]jjhhhhhhhhhbllllliadmin_jjbi/Destrowwi[:admin,ea];whj/Backwwi[€kbadmin_;whj/edit_llllliadmin_n/Backwwiadmin_;w
+
+Convert controller spec to admin
+
+    /descrwiAdmin::jddnn<<Oit 'should be an admin controller' doexpect(controller).to be €kb_an AdminControllerend/redirectnwli[:admin,eeea]nnwwi[:admin,ea]nnwliadmin_zz;w
