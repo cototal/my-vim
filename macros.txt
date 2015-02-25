@@ -11,3 +11,11 @@ Convert views to admin
 Convert controller spec to admin
 
     /descrwiAdmin::jddnn<<Oit 'should be an admin controller' doexpect(controller).to be €kb_an AdminControllerend/redirectnwli[:admin,eeea]nnwwi[:admin,ea]nnwliadmin_zz;w
+
+Pull field from schema to factory girl
+
+    yi"jp>>.y$$a 'pa'kj
+
+Convert factory girl field to sequence
+
+    i(€kbsequence(:ce€kb€kbea) {|n|$i-01€kb€kb#{n}bbbbr"$r"a}j^
