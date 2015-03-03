@@ -12,6 +12,7 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set clipboard=unnamedplus
+set dir=~/tmp
 
 let NERDTreeWinSize=20
 let NERDTreeShowHidden=1
@@ -19,6 +20,7 @@ let NERDTreeShowHidden=1
 map ; :
 map <C-n> :NERDTree<CR>
 
+imap <C-e> <CR>end<Esc>ko
 
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
