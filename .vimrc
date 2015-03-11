@@ -22,5 +22,7 @@ map <C-n> :NERDTree<CR>
 
 imap <C-e> <CR>end<Esc>ko
 
+vnoremap // y/<C-R>"<CR>
+
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
