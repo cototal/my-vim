@@ -15,5 +15,5 @@ git clone https://github.com/scrooloose/nerdtree bundle/nerdtree
 git clone https://github.com/mattn/emmet-vim bundle/emmet-vim
 git clone https://github.com/zeis/vim-kolor bundle/vim-kolor
 git clone git://github.com/godlygeek/tabular.git bundle/tabular
-git clone git://github.com/tpope/vim-rails.git
-git clone git://github.com/tpope/vim-abolish.git
+git clone git://github.com/tpope/vim-rails.git bundle/vim-rails
+git clone git://github.com/tpope/vim-abolish.git bundle/vim-abolish
