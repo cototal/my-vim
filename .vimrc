@@ -17,6 +17,9 @@ set dir=~/tmp
 let NERDTreeWinSize=20
 let NERDTreeShowHidden=1
 
+let mapleader=","
+nnoremap <leader><space> :noh<cr>
+
 map ; :
 map <C-n> :NERDTree<CR>
 
