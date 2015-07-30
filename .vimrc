@@ -14,7 +14,8 @@ set shiftround
 set shiftwidth=2
 set softtabstop=2
 set expandtab
-set clipboard=unnamedplus
+set clipboard=unnamed
+
 set dir=~/tmp
 set wildmenu
 set showcmd
