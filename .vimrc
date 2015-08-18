@@ -33,7 +33,7 @@ imap <C-e> <CR>end<Esc>ko
 
 vnoremap // y/<C-R>"<CR>
 
-let @r=':%s/:\(\w\+\) =>/\1:/g'
+let @r=':%s/:\(\w\+\) =>/\1:/'
 
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
