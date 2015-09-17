@@ -37,6 +37,9 @@ let @r=':%s/:\(\w\+\) =>/\1:/'
 
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd Filetype text setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype cs setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 function! InsertTabWrapper()
   " Get current column of cursor
