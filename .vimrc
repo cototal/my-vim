@@ -20,8 +20,11 @@ set dir=~/tmp
 set wildmenu
 set showcmd
 
-let NERDTreeWinSize=20
-let NERDTreeShowHidden=1
+let NERDTreeWinSize = 20
+let NERDTreeShowHidden = 1
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '>'
+let g:NERDTreeDirArrowCollapsible = 'v'
 
 let mapleader=","
 nnoremap <leader><space> :noh<cr>
