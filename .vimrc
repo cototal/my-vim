@@ -34,6 +34,10 @@ map <C-n> :NERDTree<CR>
 
 imap <C-e> <CR>end<Esc>ko
 
+" Copy and paste
+vmap <C-y> :w! ~/tmp/clipboard<CR>
+nmap <C-p> :read !cat ~/tmp/clipboard<CR>
+
 vnoremap // y/<C-R>"<CR>
 
 let @r=':%s/:\(\w\+\) =>/\1:/'
