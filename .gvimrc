@@ -1,2 +1,6 @@
 colorscheme kolor
-set guifont=Source\ Code\ Pro\ 11
+if $TERM=~'xterm'
+  set guifont=Source\ Code\ Pro\ 14
+else
+  set guifont=Source\ Code\ Pro\ 11
+endif
