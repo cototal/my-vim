@@ -31,6 +31,7 @@ nnoremap <leader><space> :noh<cr>
 
 map ; :
 map <C-n> :NERDTree<CR>
+map <C-b> :BufExplorer<CR>
 
 imap <C-e> <CR>end<Esc>ko
 
