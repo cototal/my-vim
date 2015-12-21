@@ -17,6 +17,8 @@ bundles = [
   ["wincent/command-t", "command-t"]
 ]
 
+Dir.mkdir "bundle" unless Dir.exist?("bundle")
+
 bundles.each do |bundle|
   next if Dir.exist?("bundle/#{bundle[1]}")
 
