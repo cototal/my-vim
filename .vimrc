@@ -43,10 +43,13 @@ vnoremap // y/<C-R>"<CR>
 
 let @r=':%s/:\(\w\+\) =>/\1:/'
 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.md set filetype=text
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 autocmd Filetype text setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype typescript setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype cs setlocal tabstop=4 softtabstop=4 shiftwidth=4
 
 function! InsertTabWrapper()
