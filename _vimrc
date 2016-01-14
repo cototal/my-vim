@@ -3,8 +3,8 @@ syntax on
 filetype plugin indent on
 
 " Set $ENV
-if filereadable("env.vim")
-  source env.vim
+if filereadable($VIM . "env.vim")
+  source $VIM/env.vim
 endif
 
 if $ENV == 'DOS3710'
