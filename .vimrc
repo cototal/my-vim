@@ -64,3 +64,8 @@ endfunction
 " Using <c-r>= to get the expression register from insert mode
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
+
+imap <C-k> <Plug>snipMateNextOrTrigger
+smap <C-k> <Plug>snipMateNextOrTrigger
+imap <C-j> <Plug>snipMateBack
+smap <C-j> <Plug>snipMateBack

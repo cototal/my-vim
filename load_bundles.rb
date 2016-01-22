@@ -14,6 +14,12 @@ bundles = [
   ["slim-template/vim-slim", "vim-slim"],
   ["leafgarland/typescript-vim", "typescript-vim"],
   ["jlanzarotta/bufexplorer", "bufexplorer"],
+  ["jiangmiao/auto-pairs", "auto-pairs"],
+  ["tpope/vim-endwise", "vim-endwise"],
+  ["tomtom/tlib_vim", "tlib_vim"], # snipmate dependency
+  ["MarcWeber/vim-addon-mw-utils", "vim-addon-mw-utils"], # snipmate dependency
+  ["garbas/vim-snipmate", "vim-snipmate"],
+  ["honza/vim-snippets.git", "vim-snippets"], # default snippets
   ["wincent/command-t", "command-t"]
 ]
 
