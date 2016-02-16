@@ -34,6 +34,7 @@ map <C-n> :NERDTree<CR>
 map <C-b> :BufExplorer<CR>
 
 imap <C-e> <CR>end<Esc>ko
+imap <C-c> <Nop>
 
 " Copy and paste
 vmap <C-y> :w! ~/tmp/clipboard<CR>
