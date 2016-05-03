@@ -9,7 +9,10 @@ set hlsearch
 set gdefault
 set backspace=indent,eol,start
 set autoindent
-set smartindent "Should figure out where your tab needs to jump to
+
+" Often fails with # sign
+"set smartindent
+
 set shiftround
 set shiftwidth=2
 set softtabstop=2
@@ -35,6 +38,10 @@ map <C-b> :BufExplorer<CR>
 
 imap <C-e> <CR>end<Esc>ko
 imap <C-c> <Nop>
+
+" Until I stop hitting C-p when trying to hit C-[
+imap <C-p> <Nop>
+
 
 " Copy and paste
 vmap <C-y> :w! ~/tmp/clipboard<CR>
