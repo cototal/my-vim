@@ -42,6 +42,10 @@ imap <C-c> <Nop>
 " Until I stop hitting C-p when trying to hit C-[
 imap <C-p> <Nop>
 
+" Stop closing windows outside vim...
+imap <C-w> <Nop>
+inoremap <C-b> <C-w>
+
 
 " Copy and paste
 vmap <C-y> :w! ~/tmp/clipboard<CR>
