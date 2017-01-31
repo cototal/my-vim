@@ -26,8 +26,8 @@ set showcmd
 let NERDTreeWinSize = 20
 let NERDTreeShowHidden = 1
 let g:NERDTreeDirArrows = 1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '~'
 
 let mapleader=","
 nnoremap <leader><space> :noh<cr>
@@ -59,6 +59,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.md set filetype=text
+autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
 autocmd Filetype text setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
 autocmd Filetype typescript setlocal tabstop=4 softtabstop=4 shiftwidth=4
