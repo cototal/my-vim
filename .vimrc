@@ -14,8 +14,8 @@ set autoindent
 "set smartindent
 
 set shiftround
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set clipboard=unnamed
 
@@ -60,10 +60,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
-autocmd Filetype text setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype typescript setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype cs setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 function! InsertTabWrapper()
   " Get current column of cursor
