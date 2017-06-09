@@ -19,7 +19,8 @@ bundles = [
   ["MarcWeber/vim-addon-mw-utils", "vim-addon-mw-utils"], # snipmate dependency
   ["garbas/vim-snipmate", "vim-snipmate"],
   ["honza/vim-snippets.git", "vim-snippets"], # default snippets
-  ["wincent/command-t", "command-t"]
+  ["wincent/command-t", "command-t"],
+  ["AlessandroYorba/Sierra", "Sierra"]
 ]
 
 Dir.mkdir "bundle" unless Dir.exist?("bundle")
@@ -32,9 +33,8 @@ end
 
 unless File.exist?("bundle/command-t/ruby/command-t/ext.so")
   system "rbenv local system"
-  Dir.chdir("bundle/command-t/ruby/command-t")
+  Dir.chdir("bundle/command-t/ruby/command-t/ext/command-t")
   system "ruby extconf.rb"
   system "make"
-  Dir.chdir("../../../..")
   system "cd ~/.vim"
 end
