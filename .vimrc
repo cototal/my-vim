@@ -79,3 +79,8 @@ imap <C-k> <Plug>snipMateNextOrTrigger
 smap <C-k> <Plug>snipMateNextOrTrigger
 imap <C-j> <Plug>snipMateBack
 smap <C-j> <Plug>snipMateBack
+
+" Use env file to overwrite standard settings
+if filereadable($VIM . "/env.vim")
+    source $VIM/env.vim
+endif
