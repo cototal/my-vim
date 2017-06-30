@@ -75,6 +75,9 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 
+" Remove extra whitespace (http://vim.wikia.com/wiki/Remove_unwanted_spaces)
+nnoremap <silent> <C-f> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
 imap <C-k> <Plug>snipMateNextOrTrigger
 smap <C-k> <Plug>snipMateNextOrTrigger
 imap <C-j> <Plug>snipMateBack
