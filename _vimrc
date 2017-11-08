@@ -17,7 +17,6 @@ else
   set viminfo+=n~/_viminfo
 endif
 
-
 set number
 set shortmess=at
 set incsearch
@@ -25,10 +24,13 @@ set hlsearch
 set gdefault
 set backspace=indent,eol,start
 set autoindent
-set smartindent "Should figure out where your tab needs to jump to
+
+" Often fails with # sign
+"set smartindent
+
 set shiftround
-set shiftwidth=2
-set softtabstop=2
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 set clipboard=unnamed
 
@@ -37,7 +39,9 @@ set showcmd
 
 let NERDTreeWinSize = 20
 let NERDTreeShowHidden = 1
-let g:NERDTreeDirArrows = 0
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeDirArrowExpandable = '+'
+let g:NERDTreeDirArrowCollapsible = '~'
 
 let mapleader=","
 nnoremap <leader><space> :noh<cr>
@@ -51,10 +55,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.md set filetype=text
-autocmd Filetype text setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype typescript setlocal tabstop=4 softtabstop=4 shiftwidth=4
-autocmd Filetype cs setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
+autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 function! InsertTabWrapper()
   " Get current column of cursor
@@ -69,5 +71,25 @@ endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
 
-colorscheme kolor
-set guifont=Source\ Code\ Pro:h11
+" Remove extra whitespace (http://vim.wikia.com/wiki/Remove_unwanted_spaces)
+nnoremap <silent> <C-f> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
+
+imap <C-k> <Plug>snipMateNextOrTrigger
+smap <C-k> <Plug>snipMateNextOrTrigger
+imap <C-j> <Plug>snipMateBack
+smap <C-j> <Plug>snipMateBack
+
+" Set $ENV
+if filereadable($VIM . "env.vim")
+  source $VIM/env.vim
+endif
+
+if $ENV == 'DOS3710'
+  set dir=$VIM/tmp
+  set backupdir=$VIM/tmp/backups
+  set viminfo+=n$VIM/_viminfo
+else
+  set dir=~/tmp
+  set backupdir=~/tmp/backups
+  set viminfo+=n~/_viminfo
+endif
