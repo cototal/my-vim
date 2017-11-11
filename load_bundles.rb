@@ -10,6 +10,7 @@ bundles = [
   ["tpope/vim-rails", "vim-rails"],
   ["tpope/vim-abolish", "vim-abolish"],
   ["kchmck/vim-coffee-script", "vim-coffee-script"],
+  ["digitaltoad/vim-pug", "vim-pug"],
   ["digitaltoad/vim-jade", "vim-jade"],
   ["slim-template/vim-slim", "vim-slim"],
   ["leafgarland/typescript-vim", "typescript-vim"],
