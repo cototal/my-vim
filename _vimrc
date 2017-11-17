@@ -79,6 +79,14 @@ smap <C-k> <Plug>snipMateNextOrTrigger
 imap <C-j> <Plug>snipMateBack
 smap <C-j> <Plug>snipMateBack
 
+function! IPhpExpandClass()
+  call PhpExpandClass()
+    call feedkeys('a', 'n')
+  endfunction
+  autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+  autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+endfunction
+
 " Set $ENV
 if filereadable($VIM . "env.vim")
   source $VIM/env.vim
