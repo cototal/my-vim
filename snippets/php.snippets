@@ -1,0 +1,37 @@
+snippet derp
+	<?php
+
+	${0:${VISUAL}}
+snippet gs
+	/**
+	 * @return ${1:typeName}
+	 */
+	public function get${2:capName}()
+	{
+		return $this->${3:varName};
+	}
+
+	/**
+	 * @param ${4:$1} $${5:$3}
+	 */
+	public function set${6:$2}(${7:$3})
+	{
+		$this->${8:$3} = $${9:$3};
+	}
+snippet pubf
+	/**
+	 * ${1:comment}
+	 */
+	public function ${2:name}(${3:params})
+	{
+		${4:body}
+	}
+snippet srr
+	return $this->render("${1:view}", [
+		${2:vars}
+	]);
+snippet ctor
+	public function __construct(${0:params})
+	{
+		${1:vars}
+	}

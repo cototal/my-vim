@@ -15,6 +15,7 @@ bundles = [
   ["slim-template/vim-slim", "vim-slim"],
   ["leafgarland/typescript-vim", "typescript-vim"],
   ["jlanzarotta/bufexplorer", "bufexplorer"],
+  ["arnaud-lb/vim-php-namespace", "vim-php-namespace"],
   ["tpope/vim-endwise", "vim-endwise"],
   ["tomtom/tlib_vim", "tlib_vim"], # snipmate dependency
   ["MarcWeber/vim-addon-mw-utils", "vim-addon-mw-utils"], # snipmate dependency
