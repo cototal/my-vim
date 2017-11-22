@@ -83,6 +83,10 @@ smap <C-k> <Plug>snipMateNextOrTrigger
 imap <C-j> <Plug>snipMateBack
 smap <C-j> <Plug>snipMateBack
 
+" Move line up/down
+nmap <C-J> :m+1<CR>
+nmap <C-K> :m-2<CR>
+
 " Use env file to overwrite standard settings
 if filereadable($VIM . "/env.vim")
     source $VIM/env.vim
