@@ -87,7 +87,31 @@ smap <C-j> <Plug>snipMateBack
 nmap <C-J> :m+1<CR>
 nmap <C-K> :m-2<CR>
 
+" PHP Namespace utilities
+function! IPhpInsertUse()
+    call PhpInsertUse()
+    call feedkeys('a',  'n')
+endfunction
+autocmd FileType php inoremap <Leader>u <Esc>:call IPhpInsertUse()<CR>
+autocmd FileType php noremap <Leader>u :call PhpInsertUse()<CR>
+
+function! IPhpExpandClass()
+    call PhpExpandClass()
+    call feedkeys('a', 'n')
+endfunction
+autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
+autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
 " Use env file to overwrite standard settings
 if filereadable($VIM . "/env.vim")
     source $VIM/env.vim
 endif
+
+" Swedish writing
+inoremap aaa å
+inoremap ooo ö
+inoremap eee ä
+inoremap AAA Å
+inoremap OOO Ö
+inoremap EEE Ä
+
