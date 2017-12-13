@@ -53,12 +53,9 @@ nmap <C-p> :read !cat ~/tmp/clipboard<CR>
 
 vnoremap // y/<C-R>"<CR>
 
-let @r=':%s/:\(\w\+\) =>/\1:/'
-
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 autocmd BufRead,BufNewFile *.hbs set filetype=html
-autocmd BufNewFile,BufReadPost *.md set filetype=text
 autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
 autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
@@ -106,12 +103,4 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 if filereadable($VIM . "/env.vim")
     source $VIM/env.vim
 endif
-
-" Swedish writing
-inoremap aaa å
-inoremap ooo ö
-inoremap eee ä
-inoremap AAA Å
-inoremap OOO Ö
-inoremap EEE Ä
 
