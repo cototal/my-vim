@@ -88,6 +88,9 @@ endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 
+" Find non-ASCII characters (smart quotes) 
+" /[^\x00-\x7F]
+
 " Set $ENV
 if filereadable($VIM . "env.vim")
   source $VIM/env.vim
