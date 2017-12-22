@@ -19,6 +19,9 @@ set softtabstop=4
 set expandtab
 set clipboard=unnamed
 
+set fileformat=unix
+set fileformats=unix,dos
+
 set wildmenu
 set showcmd
 
