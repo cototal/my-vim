@@ -58,6 +58,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
 autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 function! InsertTabWrapper()
   " Get current column of cursor
