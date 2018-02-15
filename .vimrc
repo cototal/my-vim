@@ -46,6 +46,7 @@ imap <C-p> <Nop>
 imap <C-w> <Nop>
 inoremap <C-b> <C-w>
 
+inoremap jk <esc>
 
 " Copy and paste
 vmap <C-y> :w! ~/tmp/clipboard<CR>
