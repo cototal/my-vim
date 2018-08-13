@@ -22,6 +22,9 @@ set clipboard=unnamed
 set fileformat=unix
 set fileformats=unix,dos
 
+" This may be necessary to handle symlinks on a mounted samba folder
+set backupcopy=yes
+
 set wildmenu
 set showcmd
 
