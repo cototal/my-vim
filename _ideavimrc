@@ -1,0 +1,51 @@
+syntax on
+filetype plugin indent on
+
+set number
+set shortmess=at
+set incsearch
+set hlsearch
+set gdefault
+set backspace=indent,eol,start
+set autoindent
+
+set shiftround
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set clipboard=unnamed
+
+set fileformat=unix
+set fileformats=unix,dos
+
+" This seems necessary to handle symlinks on a mounted samba folder
+set backupcopy=yes
+
+set wildmenu
+set showcmd
+
+let mapleader=","
+nnoremap <leader><space> :noh<cr>
+
+map ; :
+
+" Use highlighted text as search
+vnoremap // y/<C-R>"<CR>
+
+autocmd BufRead,BufNewFile *.hbs set filetype=html
+autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
+autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+
+inoremap jk <esc>
+
+" Stop closing windows outside vim...
+imap <C-w> <Nop>
+inoremap <C-b> <C-w>
+
+" Move line up/down
+nmap <C-J> :m+1<CR>
+nmap <C-K> :m-2<CR>
+
+set surround
+set multiple-cursors
