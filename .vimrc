@@ -22,6 +22,8 @@ set clipboard=unnamed
 set dir=~/tmp
 set wildmenu
 set showcmd
+" Make shell commands 'interactive', so that the .bashrc file is read
+set shellcmdflag=-ic
 
 let NERDTreeWinSize = 20
 let NERDTreeShowHidden = 1
