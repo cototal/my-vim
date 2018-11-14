@@ -54,8 +54,9 @@ inoremap jk <esc>
 vmap <C-y> :w! ~/tmp/clipboard<CR>
 nmap <C-p> :read !cat ~/tmp/clipboard<CR>
 
+" Use highlighted text as search
 vnoremap // y/<C-R>"<CR>
-
+" Close all if NERDtree is the only open window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 autocmd BufRead,BufNewFile *.hbs set filetype=html
@@ -104,6 +105,9 @@ function! IPhpExpandClass()
 endfunction
 autocmd FileType php inoremap <Leader>e <Esc>:call IPhpExpandClass()<CR>
 autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
+
+" Find non-ASCII characters (smart quotes)
+" /[^\x00-\x7F]
 
 " Use env file to overwrite standard settings
 if filereadable($VIM . "/env.vim")

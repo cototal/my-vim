@@ -22,7 +22,7 @@ set clipboard=unnamed
 set fileformat=unix
 set fileformats=unix,dos
 
-" This may be necessary to handle symlinks on a mounted samba folder
+" This seems necessary to handle symlinks on a mounted samba folder
 set backupcopy=yes
 
 set wildmenu
@@ -41,6 +41,11 @@ map ; :
 map <C-n> :NERDTree<CR>
 map <C-b> :BufExplorer<CR>
 
+" Stop closing windows outside vim...
+imap <C-w> <Nop>
+inoremap <C-b> <C-w>
+
+inoremap jk <esc>
 " Use highlighted text as search
 vnoremap // y/<C-R>"<CR>
 " Close all if NERDtree is the only open window
@@ -49,6 +54,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 autocmd BufRead,BufNewFile *.hbs set filetype=html
 autocmd BufNewFile,BufReadPost *.es6 set filetype=typescript
 autocmd Filetype ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype slim setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype pug setlocal tabstop=2 softtabstop=2 shiftwidth=2
 autocmd Filetype yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 function! InsertTabWrapper()
@@ -63,10 +70,6 @@ endfunction
 " Using <c-r>= to get the expression register from insert mode
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-p>
-
-" Stop closing windows outside vim...
-imap <C-w> <Nop>
-inoremap <C-b> <C-w>
 
 " Remove extra whitespace (http://vim.wikia.com/wiki/Remove_unwanted_spaces)
 nnoremap <silent> <C-f> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> :nohl <Bar> :unlet _s <CR>
@@ -99,7 +102,7 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 " /[^\x00-\x7F]
 
 " Set $ENV
-if filereadable($VIM . "env.vim")
+if filereadable($VIM . "/env.vim")
   source $VIM/env.vim
 endif
 
