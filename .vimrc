@@ -109,6 +109,17 @@ autocmd FileType php noremap <Leader>e :call PhpExpandClass()<CR>
 " Find non-ASCII characters (smart quotes)
 " /[^\x00-\x7F]
 
+" Function to change local tab size
+" Example:
+"   call ChangeTabWidth(2)
+function! ChangeTabWidth(size)
+    " Variables are referenced with 'a:' prefix
+    " Local settings are set using '&l:' prefix
+    let &l:shiftwidth=a:size
+    let &l:softtabstop=a:size
+endfunction
+
+
 " Use env file to overwrite standard settings
 if filereadable($VIM . "/env.vim")
     source $VIM/env.vim
