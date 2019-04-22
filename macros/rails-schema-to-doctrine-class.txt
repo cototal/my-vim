@@ -1,0 +1,50 @@
+To prepare, create a PHP class and paste the schema block inside
+
+<?php
+
+namespace App\Archive\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @ORM\Table(name="pvls")
+  * @ORM\Entity
+   */
+   class Pvl
+   {
+     create_table "pvls", :primary_key => "pvl_id", :force => true do |t|
+        t.datetime "created_at"
+        t.string   "created_by",                   :limit => 30
+   }
+}
+
+Then run these macros
+
+
+a - Set table name
+/create_tablewlyi"?Table$bbvi"p
+
+b - Primary key block
+
+    /**
+     * @ORM\Column(type="integer")
+     * @ORM\Id
+     * @var int
+     */
+    public $pvlId;
+
+c - Set primary key
+gg?€kb/classj"bp/primarwwwyi"kbvepjdd
+
+d - Field block
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    public $createdBy;
+
+e - Set field
+^"dPOjjjjjwwwveykkk$bbvepjjj^wwwlyi"kbvepjdd^
+
+f - Snake case to camel case
+/_x~

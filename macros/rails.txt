@@ -1,5 +1,3 @@
-## Rails
-
 Convert to admin controller
 
     $bceAdminController^wiAdmin::jjjddjjjjddjjjddjjjjddjjjddjjjjwwi[:admin,eea]jjjjjjddjjwwi[:admin,eea]jjjjjjddjjwwiadmin_jjjjddjjjjdd;w
@@ -20,12 +18,3 @@ Convert factory girl field to sequence
 
     i(€kbsequence(:ce€kb€kbea) {|n|$i-01€kb€kb#{n}bbbbr"$r"a}j^
 
-### Omniapp
-
-Convert to admin controller
-
-    wiAdmin::/ApplicationctCAdmin/#dd.n..n.n.n..n..n..n.n.zzgg/::nnbi::nnb.nnb.nnb.nzzggjnnnnn/redirect_towi[:admin,eea]nelwi[:admin,eea]zznwiadmin_NNN/locationwwi[:admin,eea]nwwi[:admin,eea]gg;w
-
-Convert to admin views (starting from _form)
-
-    /form_forwwba[:admin,eea];whj/Showwwi[:admin,eea]/pathbiadmin_;whj/new_lllaadmin_/Showwwi[:admin,ea]/edit_llllaadmin_/Deletewwi[:admin,ea];whjj/urlwiadmin_;whj/b€kbBackwwiadmin_;whj/edit_llllaadmin_/pathnbiadmin_;whj
