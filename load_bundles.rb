@@ -22,7 +22,8 @@ bundles = [
   ["garbas/vim-snipmate", "vim-snipmate"],
   ["honza/vim-snippets.git", "vim-snippets"], # default snippets
   ["wincent/command-t", "command-t"],
-  ["AlessandroYorba/Sierra", "Sierra"]
+  ["AlessandroYorba/Sierra", "Sierra"],
+  ["rhysd/vim-crystal", "vim-crystal"]
 ]
 
 Dir.mkdir "bundle" unless Dir.exist?("bundle")
