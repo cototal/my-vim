@@ -31,6 +31,8 @@ let g:NERDTreeDirArrows = 1
 let g:NERDTreeDirArrowExpandable = '+'
 let g:NERDTreeDirArrowCollapsible = '~'
 
+let g:snipMate = { 'snippet_version' : 1 }
+
 let mapleader=","
 nnoremap <leader><space> :noh<cr>
 
