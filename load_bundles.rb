@@ -23,17 +23,17 @@ bundles = [
   ["rhysd/vim-crystal", "vim-crystal"]
 ]
 
-Dir.mkdir "bundle" unless Dir.exist?("bundle")
+pack_dir = "pack/bundle/start/"
 
 bundles.each do |bundle|
-  next if Dir.exist?("bundle/#{bundle[1]}")
+  next if Dir.exist?("#{pack_dir}#{bundle[1]}")
 
-  system "git clone https://github.com/#{bundle[0]} bundle/#{bundle[1]}"
+  system "git clone https://github.com/#{bundle[0]} #{pack_dir}#{bundle[1]}"
 end
 
-unless File.exist?("bundle/command-t/ruby/command-t/ext.so")
+unless File.exist?("#{pack_dir}command-t/ruby/command-t/ext.so")
   system "rbenv local system"
-  Dir.chdir("bundle/command-t/ruby/command-t/ext/command-t")
+  Dir.chdir("#{pack_dir}command-t/ruby/command-t/ext/command-t")
   system "ruby extconf.rb"
   system "make"
   system "cd ~/.vim"

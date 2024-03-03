@@ -1,2 +1,3 @@
-bundle/
 vimfiles/
+pack/bundle/start/*
+!pack/bundle/start/.gitkeep
