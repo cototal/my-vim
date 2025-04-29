@@ -1,4 +1,4 @@
 colorscheme sierra
 
 set guioptions-=L
-set guifont=Source\ Code\ Pro:h11
+set guifont=RobotoMono\ Nerd\ Font:h13
