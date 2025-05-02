@@ -1,3 +1,3 @@
 colorscheme sierra
 set clipboard=unnamedplus
-set guifont=Source\ Code\ Pro\ 12
+set guifont=RobotoMono\ Nerd\ Font\ 12
