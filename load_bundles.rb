@@ -18,7 +18,6 @@ bundles = [
   ["MarcWeber/vim-addon-mw-utils", "vim-addon-mw-utils"], # snipmate dependency
   ["garbas/vim-snipmate", "vim-snipmate"],
   ["honza/vim-snippets.git", "vim-snippets"], # default snippets
-  ["wincent/command-t", "command-t"],
   ["AlessandroYorba/Sierra", "Sierra"],
   ["rhysd/vim-crystal", "vim-crystal"]
 ]
@@ -31,10 +30,3 @@ bundles.each do |bundle|
   system "git clone https://github.com/#{bundle[0]} #{pack_dir}#{bundle[1]}"
 end
 
-unless File.exist?("#{pack_dir}command-t/ruby/command-t/ext.so")
-  system "rbenv local system"
-  Dir.chdir("#{pack_dir}command-t/ruby/command-t/ext/command-t")
-  system "ruby extconf.rb"
-  system "make"
-  system "cd ~/.vim"
-end
